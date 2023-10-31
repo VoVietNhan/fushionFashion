@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using Application.ViewModel.AccountViewModel;
+using AutoMapper;
+using Domain.Entity;
 
 namespace Infrastructure.Mapper
 {
@@ -6,7 +8,7 @@ namespace Infrastructure.Mapper
     {
         public MapConfig()
         {
-
+            CreateMap<AccountViewModel, Account>().ReverseMap();
         }
     }
 }
