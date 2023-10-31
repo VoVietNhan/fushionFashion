@@ -9,6 +9,6 @@ namespace Application.Repository
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
-       Task<Product> FindAsync(int id);
+       Task<Product> FindAsync(Guid id);
     }
 }

@@ -24,7 +24,7 @@ namespace Infrastructure.Repository
             _claimService = claimService;
         }
 
-        public Task<Product> FindAsync(int id)
+        public Task<Product> FindAsync(Guid id)
         {
             throw new NotImplementedException();
         }
