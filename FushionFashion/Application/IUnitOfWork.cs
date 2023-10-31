@@ -6,6 +6,7 @@ namespace Application
     {
         public IAccountRepository AccountRepository { get; }
 
+        public IProductRepository ProductRepository { get; }
         public Task<int> SaveChangeAsync();
     }
 }
