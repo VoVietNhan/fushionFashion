@@ -8,13 +8,19 @@ namespace Infrastructure
     {
         private readonly AppDBContext _appDBContext;
         private readonly IProductRepository productRepository;
+        private readonly IAccountRepository _accountRepository;
 
-        public UnitOfWork(AppDBContext appDBContext, IProductRepository productRepository)
+        public UnitOfWork(AppDBContext appDBContext, 
+            IAccountRepository accountRepository, IProductRepository productRepository)
         {
             _appDBContext = appDBContext;
             this.productRepository = productRepository; 
+            _accountRepository = accountRepository;
         }
         public IProductRepository ProductRepository => productRepository;
+
+        public IAccountRepository AccountRepository => _accountRepository;
+
         public async Task<int> SaveChangeAsync() => await _appDBContext.SaveChangesAsync();
     }
 }
