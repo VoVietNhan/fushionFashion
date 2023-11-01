@@ -4,6 +4,8 @@ using Application;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Application.Repository;
+using Infrastructure.Repository;
 
 namespace Infrastructure
 {
@@ -19,7 +21,10 @@ namespace Infrastructure
             services.AddDbContext<AppDBContext>(options => options.UseSqlServer(config.GetConnectionString("AppDB")));
 
             // Add Object Services
-            /*services.AddScoped<>();*/
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
+
             return services;
         }
     }
