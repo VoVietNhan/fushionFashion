@@ -17,6 +17,8 @@ namespace Infrastructure.Mapper
             CreateMap<UpdateProductViewModel, Product>().ReverseMap();
 
             CreateMap<CreateCategoryViewModel, Category>().ReverseMap();
+            CreateMap<CategoryViewModel, Category>().ReverseMap();
+            CreateMap<UpdateCategoryViewModel, Category>().ReverseMap();
         }
     }
 }
