@@ -27,6 +27,7 @@ namespace Application.Service
         public async Task<CreateCategoryViewModel?> CreateCategory(CreateCategoryViewModel categoryDTO)
         {
             var category = _mapper.Map<Category>(categoryDTO);
+            category.Status = Domain.Enum.EnumStatus.Enable;
             await _unitOfWork.CategoryRepository.AddAsync(category);
             var isSuccess = await _unitOfWork.SaveChangeAsync() > 0;
             if (isSuccess)
@@ -36,24 +37,46 @@ namespace Application.Service
             return null;
         }
 
-        public Task DeleteCategory(Guid id)
+        public async Task DeleteCategory(Guid id)
         {
-            throw new NotImplementedException();
+            var category = await _unitOfWork.CategoryRepository.GetByIdAsync(id);
+            category.Status = Domain.Enum.EnumStatus.Disable;
+            _unitOfWork.CategoryRepository.Update(category);
+            _unitOfWork.SaveChangeAsync();
+           
         }
 
-        public Task<List<ProductViewModel>> GetCategory()
+        public async Task<List<CategoryViewModel>> GetCategory()
         {
-            throw new NotImplementedException();
+            var category = await _unitOfWork.CategoryRepository.GetAllAsync();
+            return _mapper.Map<List<CategoryViewModel>>(category);
         }
 
-        public Task<ProductViewModel> GetCAtegoryById(Guid id)
+        public async Task<CategoryViewModel> GetCategoryById(Guid id)
         {
-            throw new NotImplementedException();
+            var category = await _unitOfWork.CategoryRepository.GetByIdAsync(id);
+            return _mapper.Map<CategoryViewModel>(category);
         }
 
-        public Task<UpdateProductViewModel?> UpdateCategory(Guid id, UpdateProductViewModel productDTO)
+        public async Task<UpdateCategoryViewModel?> UpdateCategory(Guid id, UpdateCategoryViewModel categoryDTO)
         {
-            throw new NotImplementedException();
+            var category = await _unitOfWork.CategoryRepository.GetByIdAsync(id);
+
+            if (category == null)
+            {
+                return null;
+            }
+            _mapper.Map(categoryDTO, category);
+
+            _unitOfWork.CategoryRepository.Update(category);
+            var isSuccess = await _unitOfWork.SaveChangeAsync() > 0;
+
+            if (isSuccess)
+            {
+                return _mapper.Map<UpdateCategoryViewModel>(category);
+            }
+
+            return null;
         }
     }
 }

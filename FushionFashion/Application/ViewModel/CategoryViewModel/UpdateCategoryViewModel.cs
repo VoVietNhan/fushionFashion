@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModel.CategoryViewModel
 {
-    public class CreateCategoryViewModel
+    public class UpdateCategoryViewModel
     {
         public string? Name { get; set; }
     }

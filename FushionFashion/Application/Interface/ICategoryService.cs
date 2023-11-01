@@ -10,10 +10,10 @@ namespace Application.Interface
 {
     public interface ICategoryService
     {
-        Task<List<ProductViewModel>> GetCategory();
+        Task<List<CategoryViewModel>> GetCategory();
         public Task<CreateCategoryViewModel?> CreateCategory(CreateCategoryViewModel categoryDTO);
         Task DeleteCategory(Guid id);
-        public Task<UpdateProductViewModel?> UpdateCategory(Guid id, UpdateProductViewModel productDTO);
-        Task<ProductViewModel> GetCAtegoryById(Guid id);
+        public Task<UpdateCategoryViewModel?> UpdateCategory(Guid id, UpdateCategoryViewModel categoryDTO);
+        Task<CategoryViewModel> GetCategoryById(Guid id);
     }
 }
