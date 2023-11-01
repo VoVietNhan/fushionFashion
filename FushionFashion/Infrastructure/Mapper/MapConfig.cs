@@ -1,4 +1,5 @@
 ﻿using Application.ViewModel.AccountViewModel;
+using Application.ViewModel.ProductViewModel;
 using AutoMapper;
 using Domain.Entity;
 
@@ -9,6 +10,9 @@ namespace Infrastructure.Mapper
         public MapConfig()
         {
             CreateMap<AccountViewModel, Account>().ReverseMap();
+            CreateMap<ProductViewModel, Product>().ReverseMap();
+            CreateMap<CreateProductViewModel, Product>().ReverseMap();
+            CreateMap<UpdateProductViewModel, Product>().ReverseMap();
         }
     }
 }
