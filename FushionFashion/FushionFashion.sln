@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{46DF0338-8F0E-4765-AFBF-426C3D6658EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{6A7E02BA-3AC2-44F4-A2EB-F2FD6D698A7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{6A7E02BA-3AC2-44F4-A2EB-F2FD6D698A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{20D0A7A3-22F7-4DC4-A94B-51B67D9C937E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway", "Gateway\Gateway.csproj", "{20D0A7A3-22F7-4DC4-A94B-51B67D9C937E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FE", "FE", "{0A6738C6-0ABD-44A6-9EE5-0AC87425329D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{68E975AF-1BA7-4FF6-81E8-64E10A92919B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85D731EA-7A68-4BE7-ACA6-6B52E6ACF110} = {68E975AF-1BA7-4FF6-81E8-64E10A92919B}
+		{6A7E02BA-3AC2-44F4-A2EB-F2FD6D698A7F} = {0A6738C6-0ABD-44A6-9EE5-0AC87425329D}
+		{20D0A7A3-22F7-4DC4-A94B-51B67D9C937E} = {0A6738C6-0ABD-44A6-9EE5-0AC87425329D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D75026E2-7072-444E-953B-78D2D46F2DCC}

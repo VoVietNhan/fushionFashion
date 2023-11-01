@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Infrastructure.Repository
 {
@@ -23,7 +24,7 @@ namespace Infrastructure.Repository
             _claimService = claimService;
         }
 
-        public Task<Product> FindAsync(Guid id)
+        public Task<Category> FindAsync(Guid id)
         {
             throw new NotImplementedException();
         }

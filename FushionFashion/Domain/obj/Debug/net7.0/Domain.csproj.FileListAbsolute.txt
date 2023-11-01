@@ -1,0 +1,12 @@
+D:\fushionFashion\FushionFashion\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\fushionFashion\FushionFashion\Domain\bin\Debug\net7.0\Domain.dll
+D:\fushionFashion\FushionFashion\Domain\bin\Debug\net7.0\Domain.pdb
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\Domain.dll
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\Domain.pdb
+D:\fushionFashion\FushionFashion\Domain\obj\Debug\net7.0\ref\Domain.dll

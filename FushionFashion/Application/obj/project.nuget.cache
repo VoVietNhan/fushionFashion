@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sx5zGJxj6GrOitdONqUFuPK4DfFtfzvAeWZH3oJJ1C+9udIGDoSD/N3oXotsm1VNLAT5AbUBiZTcoGn2+okF4A==",
+  "success": true,
+  "projectFilePath": "D:\\fushionFashion\\FushionFashion\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nhan\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Nhan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
